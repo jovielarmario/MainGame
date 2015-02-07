@@ -1,10 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Tiling.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Documents\DOC\Game dev\2D Assets Pack V19\Scripts\2D Platformer\Video12\GameMaster.cs">
     <Files>
-      <File FileName="Assets\Scripts\switchLanes.cs" Line="19" Column="2" />
-      <File FileName="Assets\Tiling.cs" Line="40" Column="25" />
-      <File FileName="..\..\Documents\DOC\Game dev\2D Assets Pack V19\Scripts\2D Platformer\Tiling.cs" Line="70" Column="4" />
+      <File FileName="..\..\Documents\DOC\Game dev\2D Assets Pack V19\Scripts\2D Platformer\Video12\GameMaster.cs" Line="19" Column="48" />
+      <File FileName="..\..\Documents\DOC\Game dev\2D Assets Pack V19\Scripts\2D Platformer\Camera2DFollow.cs" Line="57" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
