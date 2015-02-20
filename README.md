@@ -9,9 +9,9 @@ created by Joviel Armario and Genevie Galang!!!
 
 
 Description:
-	Are you sure the monkey is faster than the turtle??
-	This game will tell you're wrong.
+	Are you sure the monkey is faster than the turtle?
+	This game will prove you're wrong.
 	Try and get all the food for them to continue the race of their lives.
-	REMEMBER! Dodge the rocks.
+	REMEMBER! Dodge the crates.
 
 Hope you enjoy!!! Thank you for downloading!!!
