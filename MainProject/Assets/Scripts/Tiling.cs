@@ -46,7 +46,6 @@ public class Tiling : MonoBehaviour {
 		}
 
 		if(spriteHeight + offsetY <= -1*(myTransform.position.y)  && hasABottomBuddy == true){
-			Debug.Log("destroy track!");
 			Destroy(myTransform.gameObject);
 		}
 
