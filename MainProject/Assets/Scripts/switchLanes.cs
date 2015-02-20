@@ -9,12 +9,17 @@ public class switchLanes : MonoBehaviour {
 	public GameObject monkey;
 	public GameObject trackOfMonkey;
 	public GameObject trackOfTurtle;
+	public GameObject grass1, grass2, grass3, grass4;
 
 
 	// Use this for initialization
 	void Start () {
 		trackOfMonkey.rigidbody2D.AddForce (Vector2.up*-(speedMonkey-16));
+		grass1.rigidbody2D.AddForce (Vector2.up*-(speedMonkey-16));
+		grass2.rigidbody2D.AddForce (Vector2.up*-(speedMonkey-16));
 		trackOfTurtle.rigidbody2D.AddForce (Vector2.up*-(speedTurtle-2));
+		grass3.rigidbody2D.AddForce (Vector2.up*-(speedTurtle-2));
+		grass4.rigidbody2D.AddForce (Vector2.up*-(speedTurtle-2));
 	}
 	
 	// Update is called once per frame

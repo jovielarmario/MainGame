@@ -1,10 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Tiling.cs">
     <Files>
-      <File FileName="Assets\Scripts\switchLanes.cs" Line="19" Column="2" />
-      <File FileName="Assets\Tiling.cs" Line="40" Column="25" />
-      <File FileName="..\..\Documents\DOC\Game dev\2D Assets Pack V19\Scripts\2D Platformer\Tiling.cs" Line="70" Column="4" />
+      <File FileName="Assets\Tiling.cs" Line="28" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
