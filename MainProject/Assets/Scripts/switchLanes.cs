@@ -23,14 +23,15 @@ public class switchLanes : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () { 
+	void Update () {
+
+		//for the trial input of mouse
+#if UNITY_EDITOR
 		if(Input.GetMouseButtonDown(0) ){
 			if(Input.mousePosition.x < Screen.width / 2){
 				if(monkey.transform.position.x < -2){
-					Debug.Log("push monkey to right");
 					monkey.rigidbody2D.AddForce (Vector2.right*speedMonkey);
 				}else{
-					Debug.Log("push monkey to left");
 					monkey.rigidbody2D.AddForce (Vector2.right*-speedMonkey);
 				}
 			}
@@ -38,12 +39,36 @@ public class switchLanes : MonoBehaviour {
 			//for the switching lanes of turtle
 			else{
 				if(turtle.transform.position.x < 2){
-					Debug.Log("push turtle to right");
 					turtle.rigidbody2D.AddForce (Vector2.right*speedTurtle);
 				}else
 				{
-					Debug.Log("push turtle to left");
 					turtle.rigidbody2D.AddForce (Vector2.right*-speedTurtle);
+				}
+			}
+		}
+#endif
+
+		//for the touch input
+		if(Input.touchCount > 0 ){
+			foreach(Touch touch in Input.touches){
+				if(touch.phase == TouchPhase.Began){
+					if(touch.position.x < Screen.width / 2){
+						if(monkey.transform.position.x < -2){
+							monkey.rigidbody2D.AddForce (Vector2.right*speedMonkey);
+						}else{
+							monkey.rigidbody2D.AddForce (Vector2.right*-speedMonkey);
+						}
+					}
+					
+					//for the switching lanes of turtle
+					else{
+						if(turtle.transform.position.x < 2){
+							turtle.rigidbody2D.AddForce (Vector2.right*speedTurtle);
+						}else
+						{
+							turtle.rigidbody2D.AddForce (Vector2.right*-speedTurtle);
+						}
+					}
 				}
 			}
 		}
