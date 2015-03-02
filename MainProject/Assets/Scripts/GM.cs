@@ -4,13 +4,13 @@ using System.Collections;
 public class GM : MonoBehaviour {
 
 	public GUISkin theSkin;
-	public float pos,pos2,pos3,pos4;
+	public float pos,pos2;
 	public static int score = 0;
 	public static int high = 0;
 	// Use this for initialization
 	void Awake () {
-		float xFactor = Screen.width / 400f;
-		float yFactor = Screen.height  / 800f;
+		float xFactor = Screen.width / 600f;
+		float yFactor = Screen.height  / 1024f;
 
 		Camera.main.rect=new Rect(0,0,1,xFactor/yFactor); 
 	}
@@ -35,10 +35,10 @@ public class GM : MonoBehaviour {
 		Color old = GUI.color;
 		GUI.color = new Color (0, 0, 0, 1);
 		GUI.skin.label.fontSize = 62;
-		GUI.Label (new Rect(((Screen.width/4)*3)+pos2,pos3,250,250), "" + score);
+		GUI.Label (new Rect(Screen.width/2-50,pos,100,100), "" + score);
 		GUI.skin.label.fontSize = 40;
 		GUI.color = old;
-		GUI.Label (new Rect(((Screen.width/4)*3)+pos,pos4,100,100), "" + high);
+		GUI.Label (new Rect(Screen.width/2-50,pos2,100,100), "" + high);
 		GUI.skin.label.fontSize = 62;
 
 	}
