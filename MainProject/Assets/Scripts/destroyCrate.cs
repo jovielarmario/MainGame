@@ -10,8 +10,16 @@ public class destroyCrate : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
-		if(myTransform.position.y < -5.4){
-			Destroy(myTransform.gameObject);
+		if(myTransform.tag == "obstacle"){
+			if(myTransform.position.y < -5.4){
+				Destroy(myTransform.gameObject);
+			}
+		}
+		if(myTransform.tag == "food"){
+			if(myTransform.position.y < -5){
+				GM.highScore();
+				GM.loadPage();
+			}
 		}
 	}
 }

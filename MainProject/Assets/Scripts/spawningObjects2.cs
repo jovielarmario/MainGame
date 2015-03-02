@@ -29,8 +29,8 @@ public class spawningObjects2 : MonoBehaviour {
 			float obj = Random.Range (min,max);
 			float lane = Random.Range (0,2.0f);
 			yield return new WaitForSeconds (obj);
-			if (lane < 1.0f) {
-				if (obj < (min + max) / 2) {
+			if (lane < 1.0f) { //which lane to create object
+				if (obj < (min + max) / 2) { //which object to create
 					createObject(prefabOfFood,spawnPoint1);
 					
 				} else {
@@ -45,10 +45,10 @@ public class spawningObjects2 : MonoBehaviour {
 			}
 		}
 	}
-	
+
 	void createObject (GameObject o, Transform p){
 		GameObject newObj = Instantiate (o,p.position,o.transform.rotation) as GameObject;
 		newObj.rigidbody2D.AddForce (Vector2.up*-speed);
 	}
-
+	
 }
