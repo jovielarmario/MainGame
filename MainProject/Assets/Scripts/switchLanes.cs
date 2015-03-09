@@ -3,8 +3,6 @@ using System.Collections;
 
 public class switchLanes : MonoBehaviour {
 
-	public float speedMonkey = 20f;
-	public float speedTurtle = 10f;
 	public GameObject turtle;
 	public GameObject monkey;
 	public GameObject trackOfMonkey;
@@ -14,12 +12,12 @@ public class switchLanes : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		trackOfMonkey.rigidbody2D.AddForce (Vector2.up*-(speedMonkey-16f));
-		grass1.rigidbody2D.AddForce (Vector2.up*-(speedMonkey-16f));
-		grass2.rigidbody2D.AddForce (Vector2.up*-(speedMonkey-16f));
-		trackOfTurtle.rigidbody2D.AddForce (Vector2.up*-(speedTurtle-2f));
-		grass3.rigidbody2D.AddForce (Vector2.up*-(speedTurtle-2f));
-		grass4.rigidbody2D.AddForce (Vector2.up*-(speedTurtle-2f));
+		trackOfMonkey.rigidbody2D.AddForce (Vector2.up*-(GM.speedT));
+		grass1.rigidbody2D.AddForce (Vector2.up*-(GM.speedT));
+		grass2.rigidbody2D.AddForce (Vector2.up*-(GM.speedT));
+		trackOfTurtle.rigidbody2D.AddForce (Vector2.up*-(GM.speedT));
+		grass3.rigidbody2D.AddForce (Vector2.up*-(GM.speedT));
+		grass4.rigidbody2D.AddForce (Vector2.up*-(GM.speedT));
 	}
 	
 	// Update is called once per frame
@@ -30,19 +28,19 @@ public class switchLanes : MonoBehaviour {
 		if(Input.GetMouseButtonDown(0) ){
 			if(Input.mousePosition.x < Screen.width / 2f){
 				if(monkey.transform.position.x < -2f){
-					monkey.rigidbody2D.AddForce (Vector2.right*speedMonkey);
+					monkey.rigidbody2D.AddForce (Vector2.right*(GM.speedR+10f));
 				}else{
-					monkey.rigidbody2D.AddForce (Vector2.right*-speedMonkey);
+					monkey.rigidbody2D.AddForce (Vector2.right*-(GM.speedR+10f));
 				}
 			}
 			
 			//for the switching lanes of turtle
 			else{
 				if(turtle.transform.position.x < 2f){
-					turtle.rigidbody2D.AddForce (Vector2.right*speedTurtle);
+					turtle.rigidbody2D.AddForce (Vector2.right*(GM.speedT+10f));
 				}else
 				{
-					turtle.rigidbody2D.AddForce (Vector2.right*-speedTurtle);
+					turtle.rigidbody2D.AddForce (Vector2.right*-(GM.speedT+10f));
 				}
 			}
 		}
@@ -54,19 +52,19 @@ public class switchLanes : MonoBehaviour {
 				if(touch.phase == TouchPhase.Began){
 					if(touch.position.x < Screen.width / 2f){
 						if(monkey.transform.position.x < -2f){
-							monkey.rigidbody2D.AddForce (Vector2.right*speedMonkey);
+							monkey.rigidbody2D.AddForce (Vector2.right*(GM.speedR+10f));
 						}else{
-							monkey.rigidbody2D.AddForce (Vector2.right*-speedMonkey);
+							monkey.rigidbody2D.AddForce (Vector2.right*-(GM.speedR+10f));
 						}
 					}
 					
 					//for the switching lanes of turtle
 					else{
 						if(turtle.transform.position.x < 2f){
-							turtle.rigidbody2D.AddForce (Vector2.right*speedTurtle);
+							turtle.rigidbody2D.AddForce (Vector2.right*(GM.speedT+10f));
 						}else
 						{
-							turtle.rigidbody2D.AddForce (Vector2.right*-speedTurtle);
+							turtle.rigidbody2D.AddForce (Vector2.right*-(GM.speedT+10f));
 						}
 					}
 				}

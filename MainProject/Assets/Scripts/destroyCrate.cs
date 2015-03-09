@@ -18,6 +18,7 @@ public class destroyCrate : MonoBehaviour {
 		if(myTransform.tag == "food"){
 			if(myTransform.position.y < -5){
 				GM.highScore();
+				GM.ResetSpeed();
 				GM.loadPage();
 			}
 		}

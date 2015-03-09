@@ -5,10 +5,10 @@ using System.Collections;
 [RequireComponent (typeof(Rigidbody2D))]
 public class Tiling : MonoBehaviour {
 	
-	public int offsetY = 2;			// the offset so that we don't get any weird errors
-	public float speed = 0;
+	public int offsetY = 2;
 	public bool reverseScale = false;
-	
+
+	private float speed = 0;
 	private float spriteHeight = 0f;
 	private Camera cam;
 	private Transform myTransform;
@@ -27,6 +27,11 @@ public class Tiling : MonoBehaviour {
 	void Start () {
 		SpriteRenderer sRenderer = GetComponent<SpriteRenderer>();
 		spriteHeight = sRenderer.sprite.bounds.size.y;
+
+		if (transform.tag == "turtle") {
+			speed = GM.speedT;
+		} else
+			speed = GM.speedR;
 	}
 	
 	// Update is called once per frame
