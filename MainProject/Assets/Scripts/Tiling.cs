@@ -5,11 +5,10 @@ using System.Collections;
 [RequireComponent (typeof(Rigidbody2D))]
 public class Tiling : MonoBehaviour {
 	
-	public int offsetY = 2;			// the offset so that we don't get any weird errors
-	public float speed = 0;
+	public int offsetY = 2;
 	public bool reverseScale = false;
-	
-	private float spriteHeight = 0f;
+
+	private float spriteHeight = 0f, old, speed;
 	private Camera cam;
 	private Transform myTransform;
 	private bool hasATopBuddy = false;
@@ -61,7 +60,7 @@ public class Tiling : MonoBehaviour {
 		if (reverseScale == true) {
 			newBuddy.localScale = new Vector3 (newBuddy.localScale.x, newBuddy.localScale.y*-1, newBuddy.localScale.z);
 		}
-		newBuddy.rigidbody2D.AddForce (Vector2.up*-speed);
+
 		newBuddy.parent = myTransform.parent;
 		newBuddy.GetComponent<Tiling> ().hasATopBuddy = false;
 		newBuddy.GetComponent<Tiling> ().hasABottomBuddy = false;

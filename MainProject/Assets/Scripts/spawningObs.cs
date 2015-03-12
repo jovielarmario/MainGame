@@ -1,33 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof(Rigidbody2D))]
 public class spawningObs : MonoBehaviour {
 	public static spawningObs gm;
 	public GameObject prefabOfObstacle;
 	public GameObject prefabOfFood;
 	public Transform spawnPoint1;
 	public Transform spawnPoint2;
-
-	public float min, max, speed;
+	public float min, max;
 	public bool colToObs = false;
 	// Use this for initialization
 	void Start () {
 		if(gm == null){
 			gm = GameObject.FindGameObjectWithTag ("spawn1").GetComponent<spawningObs>();
 		}
-
-		prefabOfFood.rigidbody2D.AddForce (Vector2.up*-speed);
-		prefabOfObstacle.rigidbody2D.AddForce (Vector2.up*-speed);
-
 		gm.StartCoroutine (gm.spawnObjects());
 	}
 
+
 	private IEnumerator spawnObjects (){
 
-		
 		while (colToObs == false) {
 			float obj = Random.Range (min,max);
-			float lane = Random.Range (0,2.0f);
+			float lane = Random.Range (0f,2.0f);
+
 			yield return new WaitForSeconds (obj);
 			if (lane < 1.0f) {
 				if (obj < (min + max) / 2) {
@@ -47,8 +44,7 @@ public class spawningObs : MonoBehaviour {
 	}
 
 	void createObject (GameObject o, Transform p){
-		GameObject newObj = Instantiate (o,p.position,o.transform.rotation) as GameObject;
-		newObj.rigidbody2D.AddForce (Vector2.up*-speed);
+		Instantiate (o, p.position, o.transform.rotation);
 	}
 	
 }
