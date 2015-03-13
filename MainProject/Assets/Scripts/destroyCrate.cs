@@ -3,6 +3,7 @@ using System.Collections;
 
 public class destroyCrate : MonoBehaviour {
 
+	//this function destroys the objects that is lost from the sight of the player
 	private Transform myTransform;
 	// Use this for initialization
 	void Start () {

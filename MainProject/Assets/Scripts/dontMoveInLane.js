@@ -1,6 +1,8 @@
 ﻿#pragma strict
 import System.Collections.Generic;
 
+//this is the function for the rabbit and the turtle not to move in the x-axis
+
 private var cam : Camera;
 private var oldY : float;
 private var oldX : float;

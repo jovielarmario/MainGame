@@ -1,6 +1,7 @@
 ﻿#pragma strict
 import System.Collections.Generic;
 
+//this performs the speed change in every moving object in the game
 var speed : float;
 
 private var old : float;

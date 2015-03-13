@@ -4,7 +4,9 @@ using System.Collections;
 [RequireComponent (typeof(SpriteRenderer))]
 [RequireComponent (typeof(Rigidbody2D))]
 public class Tiling : MonoBehaviour {
-	
+
+	//this holds the function for infinite looking track and bushes
+
 	public int offsetY = 2;
 	public bool reverseScale = false;
 

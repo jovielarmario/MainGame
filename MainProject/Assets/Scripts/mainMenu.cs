@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class mainMenu : MonoBehaviour {
 
+	//this holds the whole play button and the menu to select
 	public static bool start = true;
 	public GameObject nam;
 	public GameObject medal;

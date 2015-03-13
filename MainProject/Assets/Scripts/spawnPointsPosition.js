@@ -1,5 +1,7 @@
 ﻿#pragma strict
 
+//this is the function for setting the wall colliders in the screen
+
 var wallLeft : Transform;
 var wallRight : Transform;
 var rightPoint : int;

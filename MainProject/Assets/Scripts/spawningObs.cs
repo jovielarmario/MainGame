@@ -3,6 +3,9 @@ using System.Collections;
 
 [RequireComponent (typeof(Rigidbody2D))]
 public class spawningObs : MonoBehaviour {
+
+	//this holds the spawning process of the obstacle and food for the turtle
+
 	public static spawningObs gm;
 	public GameObject prefabOfObstacle;
 	public GameObject prefabOfFood;

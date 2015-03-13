@@ -3,6 +3,8 @@ using System.Collections;
 
 public class switchLanes : MonoBehaviour {
 
+	//this holds the function for moving the rabbit and the turtle
+
 	public GameObject turtle;
 	public GameObject monkey;
 

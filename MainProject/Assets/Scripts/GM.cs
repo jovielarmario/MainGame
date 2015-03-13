@@ -3,7 +3,8 @@ using System.Collections;
 
 public class GM : MonoBehaviour {
 
-
+	//this function holds the speed of the switching lanes of the rabbit and the turtle
+	//this also holds the score and high score of the game
 	public static float speedT = 55f;
 	public static float speedR = 55f;
 	public GUISkin theSkin;

@@ -3,6 +3,9 @@ using System.Collections;
 
 [RequireComponent (typeof(Rigidbody2D))]
 public class spawningObjects2 : MonoBehaviour {
+
+	//this holds the spawning of the obstacle and food for the rabbit
+
 	public static spawningObjects2 gm;
 	public GameObject prefabOfObstacle;
 	public GameObject prefabOfFood;
