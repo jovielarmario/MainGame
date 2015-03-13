@@ -50,17 +50,15 @@
      <Compile Include="Assets\Scripts\Tiling.cs" />
      <Compile Include="Assets\Scripts\checkObjects.cs" />
      <Compile Include="Assets\Scripts\destroyCrate.cs" />
+     <Compile Include="Assets\Scripts\endAndStartAndPause.cs" />
      <Compile Include="Assets\Scripts\mainMenu.cs" />
      <Compile Include="Assets\Scripts\pause.cs" />
      <Compile Include="Assets\Scripts\spawningObjects2.cs" />
      <Compile Include="Assets\Scripts\spawningObs.cs" />
      <Compile Include="Assets\Scripts\startFromStart.cs" />
      <Compile Include="Assets\Scripts\switchLanes.cs" />
-<<<<<<< HEAD
-     <Compile Include="Assets\respawn.cs" />
-=======
      <Compile Include="Assets\play.cs" />
->>>>>>> 64e8198fea46466bb4e1acb85b404329cb86696d
+     <Compile Include="Assets\respawn.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
