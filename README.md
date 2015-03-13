@@ -10,7 +10,7 @@ created by Joviel Armario and Genevie Galang!!!
 Description:
 	This is an android racing game.
 
-	Are you sure the monkey is faster than the rabbit?
+	Are you sure the turtle is faster than the rabbit?
 	This game will prove you're wrong.
 	Control the rabbit and the turtle at the same time!
 	Try and get all the food for them to continue the race of their lives.
