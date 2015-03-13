@@ -1,10 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\dontMoveInLane.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\mainMenu.cs">
     <Files>
-      <File FileName="Assets\Scripts\GM.cs" Line="28" Column="15" />
-      <File FileName="Assets\Scripts\updateSpeedObj.js" Line="12" Column="30" />
-      <File FileName="Assets\Scripts\dontMoveInLane.js" Line="15" Column="37" />
+      <File FileName="Assets\Scripts\mainMenu.cs" Line="45" Column="34" />
+      <File FileName="Assets\Scripts\GM.cs" Line="59" Column="32" />
+      <File FileName="Assets\play.cs" Line="37" Column="24" />
+      <File FileName="Assets\Scripts\destroyCrate.cs" Line="22" Column="17" />
+      <File FileName="Assets\Scripts\checkObjects.cs" Line="17" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

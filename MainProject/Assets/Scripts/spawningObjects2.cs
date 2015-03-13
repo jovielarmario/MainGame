@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof(Rigidbody2D))]
 public class spawningObjects2 : MonoBehaviour {
 	public static spawningObjects2 gm;
 	public GameObject prefabOfObstacle;
 	public GameObject prefabOfFood;
 	public Transform spawnPoint1;
 	public Transform spawnPoint2;
-	
 	public float min, max;
 	public bool colToObs = false;
 	// Use this for initialization
@@ -15,12 +15,9 @@ public class spawningObjects2 : MonoBehaviour {
 		if(gm == null){
 			gm = GameObject.FindGameObjectWithTag ("spawn2").GetComponent<spawningObjects2>();
 		}
-		
-		prefabOfFood.rigidbody2D.AddForce (Vector2.up*-GM.speedT);
-		prefabOfObstacle.rigidbody2D.AddForce (Vector2.up*-GM.speedT);
-		
 		gm.StartCoroutine (gm.spawnObjects2());
 	}
+
 	
 	private IEnumerator spawnObjects2 (){
 
@@ -42,12 +39,12 @@ public class spawningObjects2 : MonoBehaviour {
 					createObject(prefabOfObstacle,spawnPoint2);
 				}
 			}
+
 		}
 	}
 
 	void createObject (GameObject o, Transform p){
-		GameObject newObj = Instantiate (o,p.position,o.transform.rotation) as GameObject;
-		newObj.rigidbody2D.AddForce (Vector2.up*-GM.speedT);
+		Instantiate (o, p.position, o.transform.rotation);
 	}
 	
 }

@@ -1,4 +1,5 @@
 ﻿#pragma strict
+import System.Collections.Generic;
 
 private var cam : Camera;
 private var oldY : float;
@@ -6,6 +7,7 @@ private var oldX : float;
 private var speed : float;
 var inSetX : float;
 var monkeyOrTurtle : float;
+
 
 function Awake () {
 	cam = Camera.main;
@@ -25,7 +27,17 @@ function Update () {
 
 function OnCollisionEnter2D (colInfo : Collision2D) {
 	if(colInfo.collider.tag == "food"){
+		if(transform.tag == "turtle"){
+			GameObject.FindGameObjectWithTag("GM").GetComponent(GM).SendMessage("AddSpeed", 1f);
+		}else{
+			GameObject.FindGameObjectWithTag("GM").GetComponent(GM).SendMessage("AddSpeed", 0f);
+		}
 		rigidbody2D.velocity.x = speed;
 	}
+	
+	if(colInfo.collider.tag == "wall"){
+		rigidbody2D.velocity.x = 0;
+	}
+	
 }
 

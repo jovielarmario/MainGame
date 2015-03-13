@@ -3,8 +3,9 @@ using System.Collections;
 
 public class GM : MonoBehaviour {
 
-	public static float speedT = 40f;
-	public static float speedR = 40f;
+
+	public static float speedT = 55f;
+	public static float speedR = 55f;
 	public GUISkin theSkin;
 	public static int score = 0;
 	public static int high = 0;
@@ -16,8 +17,7 @@ public class GM : MonoBehaviour {
 		Camera.main.rect=new Rect(0,0,1,xFactor/yFactor); 
 	}
 	void Start () {
-		speedR = 40f;
-		speedT = 40f;
+		speedR = speedT = 55f;
 		score = 0;
 		high = PlayerPrefs.GetInt ("High Score");
 	}
@@ -35,8 +35,8 @@ public class GM : MonoBehaviour {
 	}
 
 	public static void ResetSpeed(){
-		speedR = 40f;
-		speedT = 40f;
+		speedR = 55f;
+		speedT = 55f;
 	}
 
 	public static void AddSpeed (string tag) {
@@ -50,7 +50,7 @@ public class GM : MonoBehaviour {
 	void OnGUI () {
 		GUI.skin = theSkin;
 		Color old = GUI.color;
-		GUI.color = new Color (0, 0, 0, 1);
+		GUI.color = old;
 		GUI.skin.label.fontSize = 62;
 		GUI.Label (new Rect(Screen.width/2-50,Camera.main.orthographicSize*Screen.height/Screen.width,100,100), "" + score);
 		GUI.skin.label.fontSize = 40;
@@ -61,7 +61,9 @@ public class GM : MonoBehaviour {
 	}
 
 	public static void loadPage (){
-		Application.LoadLevel (0);
+		play.endTurn ();
+		Time.timeScale = 0;
+		Application.LoadLevel(0);
 	}
 	
 }
